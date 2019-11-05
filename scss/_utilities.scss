@@ -1,0 +1,19 @@
+.container {
+    max-width: $website-width;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}

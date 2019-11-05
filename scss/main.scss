@@ -1,0 +1,83 @@
+@import "config";
+@import "utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 10px;
+  font-family: "Dosis", sans-serif;
+  color: $dark-color;
+  line-height: 1.6;
+  height: 100%;
+  width: 100%;
+}
+
+#header {
+  &-home {
+    background-image: url("https://images.pexels.com/photos/1955134/pexels-photo-1955134.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+    .menu-bar {
+      background-color: $dark-color;
+
+      .main-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo-text {
+          color: $light-color;
+          font-size: 2rem;
+        }
+
+        .menu-nav {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          font-weight: 600;
+
+          .menu-item {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            .menu-link {
+              font-size: 1.5rem;
+              color: $light-color;
+              min-height: 100%;
+              padding: 1.5rem 2rem;
+              @include easeOut;
+
+              &:hover {
+                background-color: lighten($dark-color, 20);
+              }
+            }
+
+            .current {
+              background-color: lighten($dark-color, 20);
+            }
+
+            .highlight {
+              height: 1rem;
+              width: 50%;
+              background-color: $main-color;
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
