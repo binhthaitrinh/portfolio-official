@@ -1,19 +1,67 @@
 .container {
-    max-width: $website-width;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 2.4rem;
+  max-width: $website-width;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2.4rem;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  display: block;
+  cursor: pointer;
+  border: none;
+  color: $light-color;
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  @include easeOut;
+
+  &.btn-primary {
+    background-color: $main-color;
+
+    &:hover {
+      background-color: darken($main-color, 10);
+      transform: scale(1.04) translateZ(0);
+    }
+  }
+
+  &.btn-negative {
+    background: none;
+    border: 1px solid $second-color;
+
+    &:hover {
+      background-color: $second-color;
+      color: $dark-color;
+    }
+  }
+}
+
+.text-lead {
+  font-size: 1.8rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb {
+  &-1 {
+    margin-bottom: 1rem;
+  }
+
+  &-2 {
+    margin-bottom: 2rem;
+  }
 }

@@ -23,6 +23,7 @@ body {
     background-position: center;
     background-size: cover;
     height: 100vh;
+    position: relative;
 
     .menu-bar {
       background-color: $dark-color;
@@ -33,8 +34,12 @@ body {
         justify-content: space-between;
 
         .logo-text {
-          color: $light-color;
+          color: $dark-color;
           font-size: 2rem;
+          background-color: $light-color;
+          padding: 0.8rem 1rem;
+          border-radius: 50%;
+          font-weight: 700;
         }
 
         .menu-nav {
@@ -49,33 +54,94 @@ body {
             align-items: center;
             justify-content: center;
             position: relative;
+            overflow: hidden;
 
             .menu-link {
-              font-size: 1.5rem;
+              font-size: 1.8rem;
               color: $light-color;
               min-height: 100%;
-              padding: 1.5rem 2rem;
+              padding: 1.8rem 2rem;
               @include easeOut;
 
               &:hover {
-                background-color: lighten($dark-color, 20);
+                background-color: lighten($dark-color, 10);
+              }
+
+              &:hover + .highlight {
+                transform: translateY(0rem) translateX(-50%);
               }
             }
 
             .current {
-              background-color: lighten($dark-color, 20);
+              background-color: lighten($dark-color, 10);
+
+              &:after {
+                display: block;
+                content: "";
+                height: 0.5rem;
+                width: 60%;
+                background-color: $main-color;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+              }
             }
 
             .highlight {
-              height: 1rem;
-              width: 50%;
+              height: 0.5rem;
+              width: 60%;
               background-color: $main-color;
               position: absolute;
               bottom: 0;
               left: 50%;
-              transform: translateX(-50%);
+              transform: translateX(-50%) translateY(0.6rem);
+              border-top-left-radius: 4px;
+              border-top-right-radius: 4px;
+              @include easeOut;
             }
           }
+        }
+      }
+    }
+
+    .header-overlay {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 3rem;
+      margin-top: 35vh;
+
+      &-left {
+        color: $light-color;
+
+        .welcome {
+          font-size: 4.5rem;
+          line-height: 1;
+        }
+
+        .name {
+          font-size: 4.5rem;
+          font-weight: 400;
+          margin: 1rem 0;
+        }
+      }
+
+      &-right {
+        display: flex;
+        align-items: center;
+
+        .right-container {
+          background-color: $dark-color;
+          border-radius: 4px;
+          opacity: 0.8;
+          color: $light-color;
+          padding: 2.5rem 2rem;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
         }
       }
     }
