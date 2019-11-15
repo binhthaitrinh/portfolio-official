@@ -70,6 +70,16 @@ img {
   }
 }
 
+.mt {
+  &-1 {
+    margin-top: 1rem;
+  }
+
+  &-2 {
+    margin-top: 2rem;
+  }
+}
+
 .ml {
   &-1 {
     margin-left: 1rem;
@@ -89,5 +99,24 @@ img {
   &-2 {
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+}
+
+section {
+  padding: 10rem 0rem;
+
+  .section-title {
+    font-size: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 5rem;
+
+    &:after {
+      display: block;
+      content: "";
+      height: 0.5rem;
+      width: 5rem;
+      background-color: $main-color;
+    }
   }
 }
