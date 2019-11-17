@@ -127,7 +127,7 @@ section {
 
       &:after {
         display: block;
-        content: "";
+        content: '';
         height: 0.5rem;
         width: 5rem;
         background-color: $main-color;
@@ -148,4 +148,13 @@ section {
   &:nth-child(even) {
     background-color: darken($light-color, 5);
   }
+}
+
+.fixed-menu {
+  position: fixed !important;
+  width: 100%;
+}
+
+.relative-menu {
+  position: relative;
 }

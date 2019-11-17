@@ -1,5 +1,110 @@
-const aboutPos = document.querySelector(".introduction").offsetTop;
+const aboutPos = document.querySelector('.introduction').offsetTop;
+const projectPos = document.querySelector('.projects').offsetTop;
+const skillPos = document.querySelector('.section-skills').offsetTop;
+const contactPos = document.querySelector('.section-contact').offsetTop;
 
-document.querySelector("#about-me").addEventListener("click", () => {
-  window.scrollTo(0, aboutPos);
+const links = [
+  { nav: '#home', position: 0 },
+  { nav: '#about-me', position: aboutPos },
+  { nav: '#projects', position: projectPos },
+  { nav: '#skills', position: skillPos },
+  { nav: '#contact', position: contactPos },
+  { nav: '#header-about-me-button', position: aboutPos },
+  { nav: '#header-get-in-touch', position: contactPos }
+];
+
+links.forEach(link => {
+  document.querySelector(link.nav).addEventListener('click', e => {
+    links.forEach(link => {
+      document.querySelector(link.nav).classList.remove('current');
+    });
+    document.querySelector(link.nav).classList.add('current');
+    // document.querySelector('.menu-bar').classList.add('fixed-menu');
+    // links.forEach(link => {
+    //   document.querySelector(link.nav).classList.remove('current');
+    // });
+    // document.querySelector(link.nav).classList.add('current');
+    // location.hash = link.nav;
+
+    // e.preventDefault();
+    window.scrollTo(0, link.position);
+  });
 });
+
+function debounce(func, wait = 20, immediate = true) {
+  var timeout;
+  return function() {
+    var context = this,
+      args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+const fixMenu = function() {
+  console.log(window.scrollY);
+  const menuHeight = document.querySelector('.menu-bar').offsetHeight;
+  if (
+    window.scrollY >= aboutPos - menuHeight &&
+    window.scrollY <= projectPos - menuHeight
+  ) {
+    document.querySelector('.menu-bar').classList.add('fixed-menu');
+    links.forEach(link => {
+      document.querySelector(link.nav).classList.remove('current');
+    });
+    document.querySelector('#about-me').classList.add('current');
+  } else if (
+    window.scrollY >= projectPos - menuHeight &&
+    window.scrollY <= skillPos - menuHeight
+  ) {
+    document.querySelector('.menu-bar').classList.add('fixed-menu');
+    links.forEach(link => {
+      document.querySelector(link.nav).classList.remove('current');
+    });
+    document.querySelector('#projects').classList.add('current');
+  } else if (
+    window.scrollY >= skillPos - menuHeight &&
+    window.scrollY <= 2850
+  ) {
+    document.querySelector('.menu-bar').classList.add('fixed-menu');
+    links.forEach(link => {
+      document.querySelector(link.nav).classList.remove('current');
+    });
+    document.querySelector('#skills').classList.add('current');
+  } else if (window.scrollY >= 2850) {
+    document.querySelector('.menu-bar').classList.add('fixed-menu');
+    links.forEach(link => {
+      document.querySelector(link.nav).classList.remove('current');
+    });
+    document.querySelector('#contact').classList.add('current');
+  } else {
+    document.querySelector('.menu-bar').classList.remove('fixed-menu');
+    links.forEach(link => {
+      document.querySelector(link.nav).classList.remove('current');
+    });
+    document.querySelector('#home').classList.add('current');
+  }
+
+  //   const menuHeight = document.querySelector('.menu-bar').offsetHeight;
+
+  //   if (
+  //     window.scrollY >= aboutPos - menuHeight &&
+  //     window.scrollY <= projectPos - menuHeight
+  //   ) {
+  //     location.hash = '#about-me';
+  //   } else if (window.scrollY >= projectPos && window.scrollY <= skillPos) {
+  //     location.hash = '#projects';
+  //   } else if (window.scrollY >= skillPos && window.scrollY <= contactPos) {
+  //     location.hash = '#skills';
+  //   } else {
+  //     location.hash = '';
+  //   }
+};
+
+window.addEventListener('scroll', debounce(fixMenu));
