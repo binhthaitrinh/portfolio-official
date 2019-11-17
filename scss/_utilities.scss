@@ -46,6 +46,18 @@ img {
       color: $dark-color;
     }
   }
+
+  &.btn-project {
+    padding: 1.2rem 1.2rem;
+    background-color: $main-color;
+    margin-right: 1rem;
+    font-size: 1.8rem;
+
+    &:hover {
+      background-color: $second-color;
+      color: $dark-color;
+    }
+  }
 }
 
 .text-lead {
@@ -105,18 +117,35 @@ img {
 section {
   padding: 10rem 0rem;
 
-  .section-title {
-    font-size: 5rem;
-    text-transform: uppercase;
-    line-height: 1.2;
+  .section-header {
     margin-bottom: 5rem;
 
-    &:after {
-      display: block;
-      content: "";
-      height: 0.5rem;
-      width: 5rem;
-      background-color: $main-color;
+    .section-title {
+      font-size: 5rem;
+      text-transform: uppercase;
+      line-height: 1.2;
+
+      &:after {
+        display: block;
+        content: "";
+        height: 0.5rem;
+        width: 5rem;
+        background-color: $main-color;
+      }
     }
+
+    .section-sub {
+      font-size: 2rem;
+    }
+  }
+}
+
+section {
+  &:nth-child(odd) {
+    background-color: $light-color;
+  }
+
+  &:nth-child(even) {
+    background-color: darken($light-color, 5);
   }
 }

@@ -15,6 +15,7 @@ body {
   line-height: 1.6;
   height: 100%;
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 #header {
@@ -251,8 +252,6 @@ body {
 }
 
 .projects {
-  background-color: darken($light-color, 5);
-
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -261,6 +260,9 @@ body {
     .project-item {
       border: 1px solid darken($light-color, 20);
 
+      .project-image {
+        display: block;
+      }
       .item-overlay {
         position: absolute;
         height: 200%;
@@ -314,7 +316,14 @@ body {
       }
 
       .project-desc {
-        padding: 1rem 1.5rem;
+        padding: 1.5rem 1.5rem;
+        background-color: $light-color;
+
+        &-btn {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
       }
     }
   }
@@ -323,12 +332,12 @@ body {
 .section-skills {
   .skill-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 0.8rem;
     .skill-item {
       background-color: transparent;
       perspective: 1000px;
-      height: 30rem;
+      height: 19rem;
 
       .skill-item-inner {
         position: relative;
@@ -360,7 +369,7 @@ body {
           background-color: $second-color;
           color: $dark-color;
           transform: rotateY(180deg);
-          font-size: 3rem;
+          font-size: 2.5rem;
         }
       }
 
@@ -368,5 +377,58 @@ body {
         transform: rotateY(180deg);
       }
     }
+  }
+}
+
+.section-contact {
+  input,
+  textarea {
+    display: block;
+    border-radius: 4px;
+    border: 1px solid $medium-color;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1rem;
+    width: 50rem;
+  }
+
+  textarea {
+    height: 10rem;
+  }
+}
+
+#footer {
+  background-color: $main-color;
+  color: $light-color;
+  padding: 3rem 0;
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      border-radius: 50%;
+      display: block;
+      height: 4.5rem;
+      width: 4.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 0.8rem;
+      color: $light-color;
+      font-size: 2rem;
+      background-color: darken($main-color, 10);
+      @include easeOut;
+      &:hover {
+        background-color: $light-color;
+        color: darken($main-color, 10);
+      }
+    }
+  }
+  .copyright {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

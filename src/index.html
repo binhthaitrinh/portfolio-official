@@ -31,19 +31,19 @@
                 <a class="menu-link current" href="#">Home</a>
               </li>
               <li class="menu-item">
-                <a class="menu-link" href="#">About Me</a>
+                <a id="about-me" class="menu-link" href="#about-me">About Me</a>
                 <div class="highlight"></div>
               </li>
               <li class="menu-item">
-                <a class="menu-link" href="#">Projects</a>
+                <a class="menu-link" href="#projects">Projects</a>
                 <div class="highlight"></div>
               </li>
               <li class="menu-item">
-                <a class="menu-link" href="#">Connect With Me</a>
+                <a class="menu-link" href="#contact">Connect With Me</a>
                 <div class="highlight"></div>
               </li>
               <li class="menu-item">
-                <a class="menu-link" href="#">Resume</a>
+                <a class="menu-link" href="#resume">Resume</a>
                 <div class="highlight"></div>
               </li>
             </ul>
@@ -115,19 +115,45 @@
 
     <section class="projects">
       <div class="container">
-        <h2 class="section-title">
-          My Projects
-        </h2>
+        <div class="section-header">
+          <h2 class="section-title">
+            My Projects
+          </h2>
+        </div>
 
         <div class="projects-grid">
           <div class="project-item">
-            <div class="project-image">
+            <a href="/" class="project-image">
               <img src="img/movieDB.png" alt="" />
               <div class="item-overlay"></div>
               <div class="project-text-overlay">
                 <h2 class="project-name">The Movie Database</h2>
               </div>
+            </a>
+
+            <div class="project-desc">
+              <p class="text-lead">
+                Browse your favorite Movies, TV Shows and actors. Share, save
+                and rate your favorite ones...
+              </p>
+              <div class="project-desc-btn mt-1">
+                <button class="btn btn-project">
+                  <i class="fas fa-globe"></i>
+                </button>
+                <button class="btn btn-project">
+                  <i class="fab fa-github"></i>
+                </button>
+              </div>
             </div>
+          </div>
+          <div class="project-item">
+            <a href="/" class="project-image">
+              <img src="img/movieDB.png" alt="" />
+              <div class="item-overlay"></div>
+              <div class="project-text-overlay">
+                <h2 class="project-name">The Movie Database</h2>
+              </div>
+            </a>
 
             <div class="project-desc">
               <p class="text-lead">
@@ -137,15 +163,14 @@
               <button class="btn btn-primary mt-1">Read More</button>
             </div>
           </div>
-
           <div class="project-item">
-            <div class="project-image">
+            <a href="/" class="project-image">
               <img src="img/movieDB.png" alt="" />
               <div class="item-overlay"></div>
               <div class="project-text-overlay">
                 <h2 class="project-name">The Movie Database</h2>
               </div>
-            </div>
+            </a>
 
             <div class="project-desc">
               <p class="text-lead">
@@ -155,15 +180,14 @@
               <button class="btn btn-primary mt-1">Read More</button>
             </div>
           </div>
-
           <div class="project-item">
-            <div class="project-image">
+            <a href="/" class="project-image">
               <img src="img/movieDB.png" alt="" />
               <div class="item-overlay"></div>
               <div class="project-text-overlay">
                 <h2 class="project-name">The Movie Database</h2>
               </div>
-            </div>
+            </a>
 
             <div class="project-desc">
               <p class="text-lead">
@@ -173,33 +197,14 @@
               <button class="btn btn-primary mt-1">Read More</button>
             </div>
           </div>
-
           <div class="project-item">
-            <div class="project-image">
+            <a href="/" class="project-image">
               <img src="img/movieDB.png" alt="" />
               <div class="item-overlay"></div>
               <div class="project-text-overlay">
                 <h2 class="project-name">The Movie Database</h2>
               </div>
-            </div>
-
-            <div class="project-desc">
-              <p class="text-lead">
-                Browse your favorite Movies, TV Shows and actors. Share, save
-                and rate your favorite ones...
-              </p>
-              <button class="btn btn-primary mt-1">Read More</button>
-            </div>
-          </div>
-
-          <div class="project-item">
-            <div class="project-image">
-              <img src="img/movieDB.png" alt="" />
-              <div class="item-overlay"></div>
-              <div class="project-text-overlay">
-                <h2 class="project-name">The Movie Database</h2>
-              </div>
-            </div>
+            </a>
 
             <div class="project-desc">
               <p class="text-lead">
@@ -215,15 +220,18 @@
 
     <section class="section-skills">
       <div class="container">
-        <h2 class="section-title">
-          Skills
-        </h2>
+        <div class="section-header">
+          <h2 class="section-title">
+            Skills
+          </h2>
+          <p class="section-sub">Hover for more detail</p>
+        </div>
 
         <div class="skill-grid">
           <div class="skill-item">
             <div class="skill-item-inner">
               <div class="front">
-                <i class="fab fa-js fa-5x"></i>
+                <i class="fab fa-js fa-4x"></i>
               </div>
               <div class="back">
                 <h2>Javascript</h2>
@@ -233,30 +241,99 @@
           <div class="skill-item">
             <div class="skill-item-inner">
               <div class="front">
-                <i class="fab fa-js fa-5x"></i>
+                <i class="fab fa-html5 fa-4x"></i>
               </div>
-              <div class="back"></div>
+              <div class="back">
+                <h2>HTML5</h2>
+              </div>
             </div>
           </div>
           <div class="skill-item">
             <div class="skill-item-inner">
               <div class="front">
-                <i class="fab fa-js fa-5x"></i>
+                <i class="fab fa-css3 fa-4x"></i>
               </div>
-              <div class="back"></div>
+              <div class="back">
+                <h2>CSS3</h2>
+              </div>
             </div>
           </div>
           <div class="skill-item">
             <div class="skill-item-inner">
               <div class="front">
-                <i class="fab fa-js fa-5x"></i>
+                <i class="fab fa-sass fa-4x"></i>
               </div>
-              <div class="back"></div>
+              <div class="back">
+                <h2>Sass</h2>
+              </div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-inner">
+              <div class="front">
+                <i class="fab fa-react fa-4x"></i>
+              </div>
+              <div class="back">
+                <h2>React</h2>
+              </div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-inner">
+              <div class="front">
+                <i class="fab fa-github fa-4x"></i>
+              </div>
+              <div class="back">
+                <h2>Github</h2>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="section-contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            Contact me
+          </h2>
+          <p class="section-sub">
+            If you liked some of my projects and the work I've done so far,
+            please feel free to contact me. I'm currently looking for internship
+            or an entry level position.
+          </p>
+        </div>
+
+        <form action="" autocomplete="turnItOff">
+          <div>
+            <input type="text" placeholder="Name" />
+          </div>
+          <div>
+            <input type="email" placeholder="Email" />
+          </div>
+          <div>
+            <input type="text" placeholder="Subject" />
+          </div>
+          <div>
+            <textarea type="text" placeholder="Message"></textarea>
+          </div>
+          <button class="btn btn-primary">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="social-icons mb-1">
+        <a href="#"><i class="fab fa-facebook-f circle-icon"></i></a>
+        <a href="#"><i class="fab fa-instagram circle-icon"></i></a>
+        <a href="#"><i class="fab fa-github circle-icon"></i></a>
+        <a href="#"><i class="fab fa-facebook-f circle-icon"></i></a>
+        <a href="#"><i class="fab fa-instagram circle-icon"></i></a>
+        <a href="#"><i class="fab fa-github circle-icon"></i></a>
+      </div>
+      <div class="copyright">© 2019 Binh Trinh</div>
+    </footer>
 
     <script src="js/index.js"></script>
   </body>
