@@ -1,5 +1,7 @@
 @import 'config';
 @import 'utilities';
+@import 'menu';
+@import 'project';
 
 * {
   margin: 0;
@@ -36,91 +38,6 @@ body {
       background-color: $dark-color;
       opacity: 0.7;
       z-index: 2;
-    }
-
-    .menu-bar {
-      background-color: $dark-color;
-      width: 100%;
-      position: relative;
-      z-index: 100;
-
-      .main-menu {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        .logo-text {
-          color: $dark-color;
-          font-size: 2rem;
-          background-color: $light-color;
-          padding: 0.8rem 1rem;
-          border-radius: 50%;
-          font-weight: 700;
-        }
-
-        .menu-nav {
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          font-weight: 600;
-
-          .menu-item {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-
-            .menu-link {
-              font-size: 1.8rem;
-              color: $light-color;
-              min-height: 100%;
-              padding: 1.8rem 2rem;
-              @include easeOut;
-
-              &:hover {
-                background-color: lighten($dark-color, 10);
-              }
-
-              &:hover + .highlight {
-                transform: translateY(0rem) translateX(-50%);
-              }
-            }
-
-            .current {
-              background-color: lighten($dark-color, 10);
-
-              &:after {
-                display: block;
-                content: '';
-                height: 0.5rem;
-                width: 60%;
-                background-color: $main-color;
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                border-top-left-radius: 4px;
-                border-top-right-radius: 4px;
-              }
-            }
-
-            .highlight {
-              height: 0.5rem;
-              width: 60%;
-              background-color: $main-color;
-              position: absolute;
-              bottom: 0;
-              left: 50%;
-              transform: translateX(-50%) translateY(0.6rem);
-              border-top-left-radius: 4px;
-              border-top-right-radius: 4px;
-              @include easeOut;
-            }
-          }
-        }
-      }
     }
 
     .header-overlay {
@@ -199,7 +116,7 @@ body {
             }
 
             .text-lead {
-              margin-right: 2px;
+              margin-right: 3px;
             }
           }
         }
@@ -278,6 +195,9 @@ body {
 
     .project-item {
       border: 1px solid darken($light-color, 20);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       .item-overlay {
         position: absolute;

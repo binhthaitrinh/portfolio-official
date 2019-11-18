@@ -58,6 +58,16 @@ img {
       color: $dark-color;
     }
   }
+
+  &.btn-second {
+    background-color: $second-color;
+    color: $dark-color;
+    font-weight: 700;
+
+    &:hover {
+      background-color: darken($second-color, 15);
+    }
+  }
 }
 
 .text-lead {
@@ -79,6 +89,16 @@ img {
 
   &-2 {
     margin-bottom: 2rem;
+  }
+}
+
+.mr {
+  &-1 {
+    margin-right: 1rem;
+  }
+
+  &-2 {
+    margin-right: 2rem;
   }
 }
 
@@ -112,6 +132,24 @@ img {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+}
+
+.section-title {
+  font-size: 5rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+
+  &:after {
+    display: block;
+    content: '';
+    height: 0.5rem;
+    width: 5rem;
+    background-color: $main-color;
+  }
+}
+
+.section-sub {
+  font-size: 2rem;
 }
 
 section {

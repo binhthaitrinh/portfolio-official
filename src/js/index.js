@@ -16,11 +16,11 @@ closeBtn.addEventListener('click', () => {
 });
 
 const links = [
-  { nav: '#home', position: 0 },
-  { nav: '#about-me', position: aboutPos },
-  { nav: '#projects', position: projectPos },
-  { nav: '#skills', position: skillPos },
-  { nav: '#contact', position: contactPos },
+  { nav: '#home-menu', position: 0 },
+  { nav: '#about-me-menu', position: aboutPos },
+  { nav: '#projects-menu', position: projectPos },
+  { nav: '#skills-menu', position: skillPos },
+  { nav: '#contact-menu', position: contactPos },
   { nav: '#header-about-me-button', position: aboutPos },
   { nav: '#header-get-in-touch', position: contactPos }
 ];
@@ -71,7 +71,7 @@ const fixMenu = function() {
     links.forEach(link => {
       document.querySelector(link.nav).classList.remove('current');
     });
-    document.querySelector('#about-me').classList.add('current');
+    document.querySelector('#about-me-menu').classList.add('current');
   } else if (
     window.scrollY >= projectPos - 2 * menuHeight &&
     window.scrollY <= skillPos - 2 * menuHeight
@@ -80,7 +80,7 @@ const fixMenu = function() {
     links.forEach(link => {
       document.querySelector(link.nav).classList.remove('current');
     });
-    document.querySelector('#projects').classList.add('current');
+    document.querySelector('#projects-menu').classList.add('current');
   } else if (
     window.scrollY >= skillPos - 2 * menuHeight &&
     window.scrollY <= 2850
@@ -89,19 +89,19 @@ const fixMenu = function() {
     links.forEach(link => {
       document.querySelector(link.nav).classList.remove('current');
     });
-    document.querySelector('#skills').classList.add('current');
+    document.querySelector('#skills-menu').classList.add('current');
   } else if (window.scrollY >= 2850) {
     document.querySelector('.menu-bar').classList.add('fixed-menu');
     links.forEach(link => {
       document.querySelector(link.nav).classList.remove('current');
     });
-    document.querySelector('#contact').classList.add('current');
+    document.querySelector('#contact-menu').classList.add('current');
   } else {
     document.querySelector('.menu-bar').classList.remove('fixed-menu');
     links.forEach(link => {
       document.querySelector(link.nav).classList.remove('current');
     });
-    document.querySelector('#home').classList.add('current');
+    document.querySelector('#home-menu').classList.add('current');
   }
 
   //   const menuHeight = document.querySelector('.menu-bar').offsetHeight;
