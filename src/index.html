@@ -19,7 +19,16 @@
   </head>
   <body>
     <header id="header-home">
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
       <div class="menu-bar">
+        <div class="close-btn">
+          <div class="btn-line"></div>
+          <div class="btn-line"></div>
+        </div>
         <div class="container">
           <nav class="main-menu">
             <div class="logo">
@@ -80,6 +89,10 @@
           </div>
         </div>
       </div>
+
+      <div class="mouse-animation">
+        <div class="scroller"></div>
+      </div>
     </header>
 
     <section class="introduction">
@@ -92,28 +105,47 @@
             <div class="intro-text-container">
               <h2 class="intro-title">Hi There! My name is Binh</h2>
               <p class="text-lead">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eos
-                ipsum, at cum laudantium, a nemo eligendi, dolorem officia
-                deserunt dolorum voluptas. Ratione porro in, modi maxime placeat
-                nesciunt? At.
+                (Yes. It does sound like the Search Engine Bing) <br />
+                I'm a Web Developer currently pursueing a Master Degree in
+                Computer Science in California State University, Fullerton. At
+                the moment, I'm focusing on front-end development, with the goal
+                to become a full-stack developer. Please check out some of my
+                projects down below.
               </p>
               <div class="intro-contact-info my-2">
-                <p class="text-lead">
-                  <i class="fas fa-envelope"></i>
-                  <span class="text-bold ml-1">Email: </span>
-                  trinhthaibinh.ecom@gmail.com
-                </p>
-                <p class="text-lead">
-                  <i class="fas fa-map-marker-alt"></i
-                  ><span class="text-bold ml-1"> Location: </span>
-                  Orange County, CA, 92708.
-                </p>
+                <div class="intro-contact-info-item">
+                  <p class="text-lead">
+                    <i class="fas fa-envelope"></i>
+                    <span class="text-bold">Email: </span>
+                  </p>
+
+                  <p class="text-lead">
+                    binhthaitrinh@csu.fullerton.edu
+                  </p>
+                </div>
+
+                <div class="intro-contact-info-item">
+                  <p class="text-lead">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="text-bold">Location: </span>
+                  </p>
+
+                  <p class="text-lead">
+                    Orange County, CA.
+                  </p>
+                </div>
               </div>
 
               <div class="intro-social-links">
-                <a href="#"><i class="fab fa-facebook-f circle-icon"></i></a>
-                <a href="#"><i class="fab fa-instagram circle-icon"></i></a>
-                <a href="#"><i class="fab fa-github circle-icon"></i></a>
+                <a href="https://www.facebook.com/t2bkun"
+                  ><i class="fab fa-facebook-f circle-icon"></i
+                ></a>
+                <a href="https://www.linkedin.com/in/binhthaitrinh/"
+                  ><i class="fab fa-linkedin circle-icon"></i
+                ></a>
+                <a href="https://github.com/binhthaitrinh"
+                  ><i class="fab fa-github circle-icon"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -131,7 +163,12 @@
 
         <div class="projects-grid">
           <div class="project-item">
-            <a href="/" class="project-image">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://serene-khorana-eafeb3.netlify.com/"
+              class="project-image"
+            >
               <img src="img/movieDB.png" alt="" />
               <div class="item-overlay"></div>
               <div class="project-text-overlay">
@@ -145,81 +182,179 @@
                 and rate your favorite ones...
               </p>
               <div class="project-desc-btn mt-1">
-                <button class="btn btn-project">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://serene-khorana-eafeb3.netlify.com/"
+                  class="btn btn-project"
+                >
                   <i class="fas fa-globe"></i>
-                </button>
-                <button class="btn btn-project">
+                </a>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://github.com/binhthaitrinh/moviedb-2"
+                  class="btn btn-project"
+                >
                   <i class="fab fa-github"></i>
-                </button>
+                </a>
               </div>
             </div>
           </div>
           <div class="project-item">
-            <a href="/" class="project-image">
-              <img src="img/movieDB.png" alt="" />
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://yelp-camp-react.herokuapp.com/"
+              class="project-image"
+            >
+              <img src="img/yelpcamp.png" alt="" />
               <div class="item-overlay"></div>
               <div class="project-text-overlay">
-                <h2 class="project-name">The Movie Database</h2>
+                <h2 class="project-name">YelpCamp</h2>
               </div>
             </a>
 
             <div class="project-desc">
               <p class="text-lead">
-                Browse your favorite Movies, TV Shows and actors. Share, save
-                and rate your favorite ones...
+                Welcome to YelpCamp, a website that lists popular camping site
+                and much more...
               </p>
-              <button class="btn btn-primary mt-1">Read More</button>
+              <div class="project-desc-btn mt-1">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://yelp-camp-react.herokuapp.com/"
+                  class="btn btn-project"
+                >
+                  <i class="fas fa-globe"></i>
+                </a>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="/"
+                  class="btn btn-project"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
             </div>
           </div>
           <div class="project-item">
-            <a href="/" class="project-image">
-              <img src="img/movieDB.png" alt="" />
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="/"
+              class="project-image"
+            >
+              <img src="img/rws.png" alt="" />
               <div class="item-overlay"></div>
               <div class="project-text-overlay">
-                <h2 class="project-name">The Movie Database</h2>
+                <h2 class="project-name">Redwoods Capital Homepage</h2>
               </div>
             </a>
 
             <div class="project-desc">
               <p class="text-lead">
-                Browse your favorite Movies, TV Shows and actors. Share, save
-                and rate your favorite ones...
+                Redwoods Capital is a private real estate investment firm
+                focused on rental housing sector...
               </p>
-              <button class="btn btn-primary mt-1">Read More</button>
+              <div class="project-desc-btn mt-1">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://redwoods-capital.netlify.com/"
+                  class="btn btn-project"
+                >
+                  <i class="fas fa-globe"></i>
+                </a>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://github.com/binhthaitrinh/redwoods-capital"
+                  class="btn btn-project"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
             </div>
           </div>
           <div class="project-item">
-            <a href="/" class="project-image">
-              <img src="img/movieDB.png" alt="" />
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="/"
+              class="project-image"
+            >
+              <img src="img/social-ape.png" alt="" />
               <div class="item-overlay"></div>
               <div class="project-text-overlay">
-                <h2 class="project-name">The Movie Database</h2>
+                <h2 class="project-name">Social Ape Network</h2>
               </div>
             </a>
 
             <div class="project-desc">
               <p class="text-lead">
-                Browse your favorite Movies, TV Shows and actors. Share, save
-                and rate your favorite ones...
+                A simple social network site for people who love to scream to
+                the Internet...
               </p>
-              <button class="btn btn-primary mt-1">Read More</button>
+              <div class="project-desc-btn mt-1">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://social-ape-c1875.web.app/"
+                  class="btn btn-project"
+                >
+                  <i class="fas fa-globe"></i>
+                </a>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://github.com/binhthaitrinh/social-ape"
+                  class="btn btn-project"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
             </div>
           </div>
           <div class="project-item">
-            <a href="/" class="project-image">
-              <img src="img/movieDB.png" alt="" />
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="/"
+              class="project-image"
+            >
+              <img src="img/spacex.png" alt="" />
               <div class="item-overlay"></div>
               <div class="project-text-overlay">
-                <h2 class="project-name">The Movie Database</h2>
+                <h2 class="project-name">SpaceX Launches</h2>
               </div>
             </a>
 
             <div class="project-desc">
               <p class="text-lead">
-                Browse your favorite Movies, TV Shows and actors. Share, save
-                and rate your favorite ones...
+                A simple site using spaceX API to list successful or failed
+                launches of spaceX...
               </p>
-              <button class="btn btn-primary mt-1">Read More</button>
+              <div class="project-desc-btn mt-1">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://arcane-oasis-27332.herokuapp.com/"
+                  class="btn btn-project"
+                >
+                  <i class="fas fa-globe"></i>
+                </a>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://github.com/binhthaitrinh/graphql-apollo-react-intro"
+                  class="btn btn-project"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -232,7 +367,10 @@
           <h2 class="section-title">
             Skills
           </h2>
-          <p class="section-sub">Hover for more detail</p>
+          <p class="section-sub">
+            I have experience with the following tools & technologies. Please
+            hover for more detail
+          </p>
         </div>
 
         <div class="skill-grid">
@@ -313,32 +451,39 @@
           </p>
         </div>
 
-        <form action="" autocomplete="turnItOff">
+        <form name="contact" method="POST" data-netlify="true">
           <div>
-            <input type="text" placeholder="Name" />
+            <input name="name" type="text" placeholder="Name" />
           </div>
           <div>
-            <input type="email" placeholder="Email" />
+            <input name="email" type="email" placeholder="Email" />
           </div>
           <div>
-            <input type="text" placeholder="Subject" />
+            <input name="subject" type="text" placeholder="Subject" />
           </div>
           <div>
-            <textarea type="text" placeholder="Message"></textarea>
+            <textarea
+              name="message"
+              type="text"
+              placeholder="Message"
+            ></textarea>
           </div>
-          <button class="btn btn-primary">Send</button>
+          <button type="submit" class="btn btn-primary">Send</button>
         </form>
       </div>
     </section>
 
     <footer id="footer">
       <div class="social-icons mb-1">
-        <a href="#"><i class="fab fa-facebook-f circle-icon"></i></a>
-        <a href="#"><i class="fab fa-instagram circle-icon"></i></a>
-        <a href="#"><i class="fab fa-github circle-icon"></i></a>
-        <a href="#"><i class="fab fa-facebook-f circle-icon"></i></a>
-        <a href="#"><i class="fab fa-instagram circle-icon"></i></a>
-        <a href="#"><i class="fab fa-github circle-icon"></i></a>
+        <a href="https://www.facebook.com/t2bkun"
+          ><i class="fab fa-facebook-f circle-icon"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/binhthaitrinh/"
+          ><i class="fab fa-linkedin circle-icon"></i
+        ></a>
+        <a href="https://github.com/binhthaitrinh"
+          ><i class="fab fa-github circle-icon"></i
+        ></a>
       </div>
       <div class="copyright">© 2019 Binh Trinh</div>
     </footer>

@@ -149,6 +149,7 @@ body {
       &-right {
         display: flex;
         align-items: center;
+        justify-content: center;
 
         .right-container {
           background-color: $dark-color;
@@ -188,6 +189,21 @@ body {
           font-weight: 700;
         }
 
+        .intro-contact-info {
+          &-item {
+            display: flex;
+
+            .fas {
+              width: 18px;
+              margin-right: 1rem;
+            }
+
+            .text-lead {
+              margin-right: 2px;
+            }
+          }
+        }
+
         .intro-social-links {
           margin-top: 2rem;
           display: flex;
@@ -225,7 +241,7 @@ body {
     }
 
     .intro-photo {
-      background-image: url('http://droitthemes.com/wp/mak/wp-content/uploads/2018/10/about_shap_bg.png');
+      background-image: url('https://droitthemes.com/wp/mak/wp-content/uploads/2018/10/about_shap_bg.png');
       height: 100%;
       background-position: center;
       background-size: 60%;
@@ -256,14 +272,13 @@ body {
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    // align-items: start;
     grid-gap: 3rem;
 
     .project-item {
       border: 1px solid darken($light-color, 20);
 
-      .project-image {
-        display: block;
-      }
       .item-overlay {
         position: absolute;
         height: 200%;
@@ -284,6 +299,7 @@ body {
         height: 17rem;
         position: relative;
         overflow: hidden;
+        display: block;
 
         img {
           height: 100%;
@@ -319,6 +335,11 @@ body {
       .project-desc {
         padding: 1.5rem 1.5rem;
         background-color: $light-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        flex: 1;
 
         &-btn {
           display: flex;
@@ -433,3 +454,44 @@ body {
     align-items: center;
   }
 }
+
+.mouse-animation {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4rem;
+  height: 6rem;
+  z-index: 90;
+  border: 4px solid darken($light-color, 10);
+  border-radius: 5rem;
+
+  .scroller {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.5rem;
+    height: 1.2rem;
+    border-radius: 2rem;
+    background-color: darken($light-color, 10);
+    animation-name: scroll-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  @keyframes scroll-animation {
+    0% {
+      transform: translateY(0%) translateX(-50%);
+    }
+    50% {
+      transform: translateY(45%) translateX(-50%);
+    }
+    100% {
+      transform: translateY(0%) translateX(-50%);
+    }
+  }
+}
+
+@import 'mobile';

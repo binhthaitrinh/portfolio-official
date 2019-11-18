@@ -3,6 +3,18 @@ const projectPos = document.querySelector('.projects').offsetTop;
 const skillPos = document.querySelector('.section-skills').offsetTop;
 const contactPos = document.querySelector('.section-contact').offsetTop;
 
+const menuBtn = document.querySelector('.menu-btn');
+const closeBtn = document.querySelector('.close-btn');
+const menu = document.querySelector('.menu-bar');
+
+menuBtn.addEventListener('click', () => {
+  menu.classList.add('show');
+});
+
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('show');
+});
+
 const links = [
   { nav: '#home', position: 0 },
   { nav: '#about-me', position: aboutPos },
@@ -15,6 +27,7 @@ const links = [
 
 links.forEach(link => {
   document.querySelector(link.nav).addEventListener('click', e => {
+    menu.classList.remove('show');
     links.forEach(link => {
       document.querySelector(link.nav).classList.remove('current');
     });
@@ -51,8 +64,8 @@ const fixMenu = function() {
   console.log(window.scrollY);
   const menuHeight = document.querySelector('.menu-bar').offsetHeight;
   if (
-    window.scrollY >= aboutPos - menuHeight &&
-    window.scrollY <= projectPos - menuHeight
+    window.scrollY >= aboutPos - 2 * menuHeight &&
+    window.scrollY <= projectPos - 2 * menuHeight
   ) {
     document.querySelector('.menu-bar').classList.add('fixed-menu');
     links.forEach(link => {
@@ -60,8 +73,8 @@ const fixMenu = function() {
     });
     document.querySelector('#about-me').classList.add('current');
   } else if (
-    window.scrollY >= projectPos - menuHeight &&
-    window.scrollY <= skillPos - menuHeight
+    window.scrollY >= projectPos - 2 * menuHeight &&
+    window.scrollY <= skillPos - 2 * menuHeight
   ) {
     document.querySelector('.menu-bar').classList.add('fixed-menu');
     links.forEach(link => {
@@ -69,7 +82,7 @@ const fixMenu = function() {
     });
     document.querySelector('#projects').classList.add('current');
   } else if (
-    window.scrollY >= skillPos - menuHeight &&
+    window.scrollY >= skillPos - 2 * menuHeight &&
     window.scrollY <= 2850
   ) {
     document.querySelector('.menu-bar').classList.add('fixed-menu');
