@@ -1,15 +1,14 @@
 #header {
   &-project {
-    height: 85vh;
+    min-height: 85vh;
     background-color: darken($main-color, 30);
     position: relative;
     overflow: hidden;
+    padding-bottom: 10rem;
 
     .project-overview {
       color: $light-color;
-      position: relative;
-      left: 0;
-      top: 15%;
+      margin-top: 10rem;
 
       &-detail {
         display: grid;

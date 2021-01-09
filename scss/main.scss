@@ -22,7 +22,7 @@ body {
 
 #header {
   &-home {
-    background-image: url('https://images.pexels.com/photos/1955134/pexels-photo-1955134.jpeg');
+    background-image: url('../img/header.jpeg');
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -36,50 +36,69 @@ body {
       height: 100%;
       width: 100%;
       background-color: $dark-color;
-      opacity: 0.7;
+      opacity: 0.8;
       z-index: 2;
     }
 
     .header-overlay {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 3rem;
-      margin-top: 35vh;
+      margin: auto;
+      margin-top: 30vh;
       position: relative;
       z-index: 10;
+      color: #fff;
+      width: 80%;
 
-      &-left {
-        color: $light-color;
-
-        .welcome {
-          font-size: 4.5rem;
-          line-height: 1;
-        }
-
-        .name {
-          font-size: 4.5rem;
-          font-weight: 400;
-          margin: 1rem 0;
-        }
+      &-subtext {
+        font-size: 2rem;
+        margin-bottom: 1.8rem;
       }
 
-      &-right {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .right-container {
-          background-color: $dark-color;
-          border-radius: 4px;
-          opacity: 0.8;
-          color: $light-color;
-          padding: 2.5rem 2rem;
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          justify-content: center;
-        }
+      &-header {
+        font-size: 7rem;
+        font-weight: 700;
+        font-family: 'Raleway', sans-serif;
+        line-height: 1;
       }
+
+      &-text {
+        font-size: 2rem;
+        margin-top: 2rem;
+        width: 60%;
+        margin-bottom: 2.5rem;
+      }
+
+      // &-left {
+      //   color: $light-color;
+
+      //   .welcome {
+      //     font-size: 4.5rem;
+      //     line-height: 1;
+      //   }
+
+      //   .name {
+      //     font-size: 4.5rem;
+      //     font-weight: 400;
+      //     margin: 1rem 0;
+      //   }
+      // }
+
+      // &-right {
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: center;
+
+      //   .right-container {
+      //     background-color: $dark-color;
+      //     border-radius: 4px;
+      //     opacity: 0.8;
+      //     color: $light-color;
+      //     padding: 2.5rem 2rem;
+      //     display: flex;
+      //     align-items: center;
+      //     flex-direction: column;
+      //     justify-content: center;
+      //   }
+      // }
     }
   }
 }

@@ -1,13 +1,10 @@
-const aboutPos = document.querySelector('.introduction').offsetTop;
-const projectPos = document.querySelector('.projects').offsetTop;
-const skillPos = document.querySelector('.section-skills').offsetTop;
-const contactPos = document.querySelector('.section-contact').offsetTop;
-
 const menuBtn = document.querySelector('.menu-btn');
 const closeBtn = document.querySelector('.close-btn');
 const menu = document.querySelector('.menu-bar');
+// const getInTouchBtn = document.querySelector('#header-get-in-touch');
 
 menuBtn.addEventListener('click', () => {
+  console.log('you click it');
   menu.classList.add('show');
 });
 
@@ -15,13 +12,18 @@ closeBtn.addEventListener('click', () => {
   menu.classList.remove('show');
 });
 
+const aboutPos = document.querySelector('.introduction').offsetTop;
+const projectPos = document.querySelector('.projects').offsetTop;
+const skillPos = document.querySelector('.section-skills').offsetTop;
+const contactPos = document.querySelector('.section-contact').offsetTop;
+
 const links = [
   { nav: '#home-menu', position: 0 },
   { nav: '#about-me-menu', position: aboutPos },
   { nav: '#projects-menu', position: projectPos },
   { nav: '#skills-menu', position: skillPos },
   { nav: '#contact-menu', position: contactPos },
-  { nav: '#header-about-me-button', position: aboutPos },
+  // { nav: '#header-about-me-button', position: aboutPos },
   { nav: '#header-get-in-touch', position: contactPos }
 ];
 
@@ -121,3 +123,7 @@ const fixMenu = function() {
 };
 
 window.addEventListener('scroll', debounce(fixMenu));
+
+// getInTouchBtn.addEventListener('click', () => {
+//   window.scrollTo(0, contactPos);
+// });

@@ -178,6 +178,28 @@
       }
     }
   }
+
+  #header {
+    &-project {
+      .project-overview {
+        .project-overview-detail {
+          grid-template-columns: 1fr;
+
+          &-image {
+            &-btn {
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .project-tech {
+    .project-tech-detail {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 // < 500
@@ -200,17 +222,14 @@
     }
     .header-overlay {
       margin-top: 25vh;
+      width: 100%;
 
-      &-left {
-        .name {
-          margin: 0.8rem auto 1.2rem auto;
-          line-height: 1;
-          font-size: 3.8rem;
-        }
+      &-header {
+        font-size: 5rem;
+      }
 
-        .welcome {
-          line-height: 1;
-        }
+      &-text {
+        width: 100%;
       }
     }
   }
@@ -256,6 +275,28 @@
           }
         }
       }
+    }
+  }
+
+  #header {
+    &-project {
+      .project-overview {
+        .project-overview-detail {
+          grid-template-columns: 1fr;
+
+          &-image {
+            &-btn {
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .project-tech {
+    .project-tech-detail {
+      grid-template-columns: 1fr;
     }
   }
 }
